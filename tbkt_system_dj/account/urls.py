@@ -8,3 +8,7 @@ import views
 urlpatterns = [
     url(r'^user/login', views.login),              # 用户登录
 ]
+
+urlpatterns += [
+    url(r'^admin/create', views.create),              # 用户登录
+]

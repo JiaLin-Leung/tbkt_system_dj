@@ -13,3 +13,14 @@ def login(username):
     user.user_id = user.id
     del user.id
     return user
+
+def create(username,password,real_name,phone_number,creat_time,level_type):
+    """
+        db.default.execute(sql)
+    """
+    sql = """
+        INSERT INTO `ticket_main`.`auth_user` (`username`, `password`, `real_name`, `phone_number`, `creat_time`, `level_type`) 
+        VALUES ('%s', '%s', '%s', '%s', '%s', '%s');
+    """ % (username,password,real_name,phone_number,creat_time,level_type)
+    data = db.default.fetchone_dict(sql2)
+    return data

@@ -32,6 +32,15 @@
     "url": "/account/user/login",
     "title": "[用户]登录",
     "group": "account",
+    "parameter": {
+      "examples": [
+        {
+          "title": "请求示例",
+          "content": "{\n    \"username\":\"liangjialin\",\n    \"password\":\"111111\"\n}",
+          "type": "json"
+        }
+      ]
+    },
     "success": {
       "examples": [
         {

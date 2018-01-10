@@ -69,7 +69,7 @@ WSGI_APPLICATION = 'tbkt_system_dj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': DB_ENGINE,
-        'NAME': 'ticket_system',  # Or path to database file if using sqlite3.
+        'NAME': 'ticket_main',  # Or path to database file if using sqlite3.
         'USER': DATABASES_CONFIG['USER'],
         'PASSWORD': DATABASES_CONFIG['PASSWORD'],
         'HOST': DATABASES_CONFIG['HOST'],
