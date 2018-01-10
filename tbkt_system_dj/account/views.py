@@ -44,8 +44,9 @@ def login(request):
         "response": "fail"
     }
     """
-    username = request.POST.get("username")
-    password = request.POST.get("password")
+    user = json.loads(request.body)
+    username = user.get("username")
+    password = user.get("password")
     if not username:
         return ajax.jsonp_fail(request, message='请输入用户名')
     if not password:
