@@ -36,7 +36,7 @@
       "examples": [
         {
           "title": "成功返回",
-          "content": "{\n    \"message\": \"\",\n    \"next\": \"\",\n    \"data\": {\n        \"username\": \"gaohaifei\",\n        \"phone_number\": \"13556666964\",\n        \"level_type\": 3,\n        \"creat_time\": 1515639376,\n        \"real_name\": \"高海飞\",\n        \"password\": \"gaohaifeiqazwsx\",\n        \"id\": 82\n    },\n    \"response\": \"ok\",\n    \"error\": \"\"\n}",
+          "content": "{\n    \"message\": \"创建成功!\",\n    \"next\": \"\",\n    \"data\": {\n        \"username\": \"mengxiang\",\n        \"phone_number\": \"13556666964\",\n        \"level_type\": 3,\n        \"user_id\": 85,\n        \"creat_time\": 1515641851,\n        \"real_name\": \"孟祥\",\n        \"password\": \"mengxiangqazwsx\"\n    },\n    \"response\": \"ok\",\n    \"error\": \"\"\n}",
           "type": "json"
         },
         {
@@ -60,7 +60,7 @@
       "examples": [
         {
           "title": "成功返回",
-          "content": "{\n    \"data\": {\n        \"creat_time\": 111111,\n        \"id\": 1,\n        \"level_type\": 1,\n        \"password\": \"111111\",\n        \"phone_number\": 1513617071,\n        \"real_name\": \"liangjialin\",\n        \"username\": \"liangjialin\"\n    },\n    \"error\": \"\",\n    \"message\": \"\",\n    \"next\": \"\",\n    \"response\": \"ok\"\n}",
+          "content": "{\n    \"message\": \"\",\n    \"next\": \"\",\n    \"data\": {\n        \"username\": \"liangjialin\",\n        \"phone_number\": \"13556666964\",\n        \"level_type\": 3,\n        \"user_id\": 81,\n        \"creat_time\": 1515638660,\n        \"real_name\": \"梁佳霖\",\n        \"password\": \"liangjialinqazwsx\"\n    },\n    \"response\": \"ok\",\n    \"error\": \"\"\n}",
           "type": "json"
         },
         {

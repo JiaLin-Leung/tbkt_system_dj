@@ -36,5 +36,7 @@ def person_info(user_id):
     :return: 
     """
     person = db.default.auth_user.get(id = user_id)
+    person.user_id = person.id
+    del person.id
     return person
 

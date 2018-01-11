@@ -17,19 +17,19 @@ def login(request):
     @apiGroup account
     @apiSuccessExample {json} 成功返回
     {
-        "data": {
-            "creat_time": 111111,
-            "id": 1,
-            "level_type": 1,
-            "password": "111111",
-            "phone_number": 1513617071,
-            "real_name": "liangjialin",
-            "username": "liangjialin"
-        },
-        "error": "",
         "message": "",
         "next": "",
-        "response": "ok"
+        "data": {
+            "username": "liangjialin",
+            "phone_number": "13556666964",
+            "level_type": 3,
+            "user_id": 81,
+            "creat_time": 1515638660,
+            "real_name": "梁佳霖",
+            "password": "liangjialinqazwsx"
+        },
+        "response": "ok",
+        "error": ""
     }
     @apiSuccessExample {json} 失败返回
     {
@@ -70,16 +70,16 @@ def create(request):
     @apiGroup account
     @apiSuccessExample {json} 成功返回
     {
-        "message": "",
+        "message": "创建成功!",
         "next": "",
         "data": {
-            "username": "gaohaifei",
+            "username": "mengxiang",
             "phone_number": "13556666964",
             "level_type": 3,
-            "creat_time": 1515639376,
-            "real_name": "高海飞",
-            "password": "gaohaifeiqazwsx",
-            "id": 82
+            "user_id": 85,
+            "creat_time": 1515641851,
+            "real_name": "孟祥",
+            "password": "mengxiangqazwsx"
         },
         "response": "ok",
         "error": ""
@@ -111,7 +111,7 @@ def create(request):
     if user_id != -1:
         person = views.person_info(user_id)
         if person:
-            return ajax.jsonp_ok(request,person)
+            return ajax.jsonp_ok(request,person,message="创建成功!")
     else:
         return ajax.jsonp_fail(request,message="该用户已存在")
 
