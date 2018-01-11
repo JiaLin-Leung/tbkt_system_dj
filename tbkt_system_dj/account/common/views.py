@@ -18,9 +18,23 @@ def create(username,password,real_name,phone_number,creat_time,level_type):
     """
         db.default.execute(sql)
     """
-    sql = """
-        INSERT INTO `ticket_main`.`auth_user` (`username`, `password`, `real_name`, `phone_number`, `creat_time`, `level_type`) 
-        VALUES ('%s', '%s', '%s', '%s', '%s', '%s');
-    """ % (username,password,real_name,phone_number,creat_time,level_type)
-    data = db.default.fetchone_dict(sql2)
-    return data
+    user = db.default.auth_user.get(username=username)
+    if user:
+        return -1
+    user_id = db.default.auth_user.create(username=username,
+                                       password=password,
+                                       real_name=real_name,
+                                       phone_number=phone_number,
+                                       creat_time=creat_time,
+                                       level_type=level_type)
+    return user_id
+
+def person_info(user_id):
+    """
+    根据user_id找到用户全部信息
+    :param user_id: 
+    :return: 
+    """
+    person = db.default.auth_user.get(id = user_id)
+    return person
+

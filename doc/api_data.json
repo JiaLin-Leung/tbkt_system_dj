@@ -29,18 +29,33 @@
   },
   {
     "type": "POST",
-    "url": "/account/user/login",
-    "title": "[用户]登录",
+    "url": "/account/admin/create",
+    "title": "[管理员]创建用户",
     "group": "account",
-    "parameter": {
+    "success": {
       "examples": [
         {
-          "title": "请求示例",
-          "content": "{\n    \"username\":\"liangjialin\",\n    \"password\":\"111111\"\n}",
+          "title": "成功返回",
+          "content": "{\n    \"message\": \"\",\n    \"next\": \"\",\n    \"data\": {\n        \"username\": \"gaohaifei\",\n        \"phone_number\": \"13556666964\",\n        \"level_type\": 3,\n        \"creat_time\": 1515639376,\n        \"real_name\": \"高海飞\",\n        \"password\": \"gaohaifeiqazwsx\",\n        \"id\": 82\n    },\n    \"response\": \"ok\",\n    \"error\": \"\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "失败返回",
+          "content": "{\n    \"message\": \"\",\n    \"next\": \"\",\n    \"data\": null,\n    \"response\": \"fail\",\n    \"error\": \"该用户已存在\"\n}",
           "type": "json"
         }
       ]
     },
+    "version": "0.0.0",
+    "filename": "./tbkt_system_dj/account/views.py",
+    "groupTitle": "account",
+    "name": "PostAccountAdminCreate"
+  },
+  {
+    "type": "POST",
+    "url": "/account/user/login",
+    "title": "[用户]登录",
+    "group": "account",
     "success": {
       "examples": [
         {

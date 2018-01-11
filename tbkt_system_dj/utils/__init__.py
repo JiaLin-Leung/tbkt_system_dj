@@ -16,6 +16,7 @@ for alias, config in settings.DATABASES.items():
                 passwd=config['PASSWORD'],
                 db=config['NAME'],
                 charset='utf8',
+                autocommit=True,
                 pool_size=settings.DB_POOL_SIZE,
                 wait_timeout=settings.DB_WAIT_TIMEOUT,
     )
