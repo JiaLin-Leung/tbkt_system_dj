@@ -15,7 +15,10 @@ def login(request):
     """
     @api {POST} /account/user/login [用户]登录
     @apiGroup account
-    @apiSuccessExample {json} 成功返回
+    @apiParamExample {params} 表单请求
+"username":"liangjialin"
+	"password":"111111"
+	@apiSuccessExample {json} 成功返回
     {
         "message": "",
         "next": "",
@@ -46,9 +49,8 @@ def login(request):
         "response": "fail"
     }
     """
-    user = json.loads(request.body)
-    username = user.get("username")
-    password = user.get("password")
+    username = request.POST.get("username")
+    password = request.POST.get("password")
     if not username:
         return ajax.jsonp_fail(request, message='请输入用户名')
     if not password:
@@ -68,6 +70,10 @@ def create(request):
     """
     @api {POST} /account/admin/create [管理员]创建用户
     @apiGroup account
+    @apiParamExample {params} 表单请求
+"real_name":"孟祥"
+	"level_type":3
+	"phone_number":"13556666964"
     @apiSuccessExample {json} 成功返回
     {
         "message": "创建成功!",

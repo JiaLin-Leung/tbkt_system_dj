@@ -22,6 +22,34 @@ define({ "api": [
     "type": "",
     "url": "",
     "version": "0.0.0",
+    "filename": "./apidoc/main.js",
+    "group": "C__Interesting_tbkt_system_dj_apidoc_main_js",
+    "groupTitle": "C__Interesting_tbkt_system_dj_apidoc_main_js",
+    "name": ""
+  },
+  {
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "optional": false,
+            "field": "varname1",
+            "description": "<p>No type.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "varname2",
+            "description": "<p>With type.</p>"
+          }
+        ]
+      }
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
     "filename": "./doc/main.js",
     "group": "C__Interesting_tbkt_system_dj_doc_main_js",
     "groupTitle": "C__Interesting_tbkt_system_dj_doc_main_js",
@@ -32,6 +60,15 @@ define({ "api": [
     "url": "/account/admin/create",
     "title": "[管理员]创建用户",
     "group": "account",
+    "parameter": {
+      "examples": [
+        {
+          "title": "表单请求",
+          "content": "\"real_name\":\"孟祥\"\n\"level_type\":3\n\"phone_number\":\"13556666964\"",
+          "type": "params"
+        }
+      ]
+    },
     "success": {
       "examples": [
         {
@@ -56,6 +93,15 @@ define({ "api": [
     "url": "/account/user/login",
     "title": "[用户]登录",
     "group": "account",
+    "parameter": {
+      "examples": [
+        {
+          "title": "表单请求",
+          "content": "\"username\":\"liangjialin\"\n\"password\":\"111111\"",
+          "type": "params"
+        }
+      ]
+    },
     "success": {
       "examples": [
         {

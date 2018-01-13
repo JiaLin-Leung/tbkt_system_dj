@@ -1,4 +1,4 @@
-[
+define({ "api": [
   {
     "success": {
       "fields": {
@@ -63,8 +63,8 @@
     "parameter": {
       "examples": [
         {
-          "title": "表单请求",
-          "content": "\"real_name\":\"孟祥\"\n\"level_type\":3\n\"phone_number\":\"13556666964\"",
+          "title": "请求",
+          "content": "是是是",
           "type": "params"
         }
       ]
@@ -96,19 +96,14 @@
     "parameter": {
       "examples": [
         {
-          "title": "表单请求",
-          "content": "\"username\":\"liangjialin\"\n\"password\":\"111111\"",
+          "title": "请求",
+          "content": "{\n    \"message\": \"\",\n    \"next\": \"\",\n    \"data\": {\n        \"username\": \"liangjialin\",\n        \"phone_number\": \"13556666964\",\n        \"level_type\": 3,\n        \"user_id\": 81,\n        \"creat_time\": 1515638660,\n        \"real_name\": \"梁佳霖\",\n        \"password\": \"liangjialinqazwsx\"\n    },\n    \"response\": \"ok\",\n    \"error\": \"\"\n}",
           "type": "params"
         }
       ]
     },
     "success": {
       "examples": [
-        {
-          "title": "成功返回",
-          "content": "{\n    \"message\": \"\",\n    \"next\": \"\",\n    \"data\": {\n        \"username\": \"liangjialin\",\n        \"phone_number\": \"13556666964\",\n        \"level_type\": 3,\n        \"user_id\": 81,\n        \"creat_time\": 1515638660,\n        \"real_name\": \"梁佳霖\",\n        \"password\": \"liangjialinqazwsx\"\n    },\n    \"response\": \"ok\",\n    \"error\": \"\"\n}",
-          "type": "json"
-        },
         {
           "title": "失败返回",
           "content": "{\n    \"error\": \"\",\n    \"message\": \"查无此人\",\n    \"next\": \"\",\n    \"response\": \"fail\"\n}",
@@ -126,4 +121,4 @@
     "groupTitle": "account",
     "name": "PostAccountUserLogin"
   }
-]
+] });
