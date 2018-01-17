@@ -10,6 +10,8 @@ def login(username):
         SELECT * from auth_user where username = "%s"
     """ % username
     user = db.default.fetchone_dict(sql)
+    if not user:
+        return -1
     user.user_id = user.id
     del user.id
     return user

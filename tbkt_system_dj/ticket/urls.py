@@ -6,5 +6,5 @@ from django.conf.urls import url
 import ticket
 
 urlpatterns = [
-    url(r'^ticket/get_all_ticket', ticket.get_all_ticket),              # 用户工单列表
+    url(r'^get_all_ticket', ticket.get_all_ticket),              # 用户工单列表
 ]

@@ -9,6 +9,7 @@ from tbkt_system_dj.account.common import views
 from xpinyin import Pinyin
 import json
 import time
+from werkzeug.security import generate_password_hash, check_password_hash
 
 def login(request):
 
@@ -56,10 +57,10 @@ def login(request):
     if not password:
         return ajax.jsonp_fail(request, message='请输入密码')
     user = views.login(username)
-    if not user:
+    print 111111111,user
+    if not user or user == -1:
         return ajax.jsonp_fail(request, message="查无此人")
-    password_real = user.password  # 利用用户名在数据库找到的人,并查到这个人的密码
-    if password_real == password:
+    if check_password_hash(user.password_hash,password):
         return ajax.jsonp_ok(request,user)
     else:
         return ajax.jsonp_fail(request, message="密码错误")
