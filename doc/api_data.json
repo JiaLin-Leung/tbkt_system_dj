@@ -125,5 +125,43 @@
     "filename": "./tbkt_system_dj/account/views.py",
     "groupTitle": "account",
     "name": "PostAccountUserLogin"
+  },
+  {
+    "type": "POST",
+    "url": "/ticket/get_all_ticket_by_type",
+    "title": "[工单]根据type获取某个用户工单情况",
+    "group": "ticket",
+    "parameter": {
+      "examples": [
+        {
+          "title": "表单请求",
+          "content": "\"user_id\":\"4\"\n\"status\":\"0\"  '0 未完成  1 已完成 2全部'\n\"type\":\"0\"  \"0 全部状态 1 响应状态 2 响应超时 3 响应错误 4 SQL慢查询 5 APP错误\"",
+          "type": "params"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "{\n        \"message\": \"\",\n        \"next\": \"\",\n        \"data\": [\n            {\n                \"count\": null,\n                \"status\": 0,\n                \"domain\": \"hd.m.jxtbkt.cn\",\n                \"url\": \"/apple-touch-icon.png\",\n                \"status_code\": null,\n                \"from_user_name\": null,\n                \"end_time\": 20180103,\n                \"begin_time\": 20180102,\n                \"from_user_id\": 1,  \n                \"id\": 4,\n                \"type\": 1,  '1 响应状态 2 响应超时 3 响应错误 4 SQL慢查询 5 APP错误'\n                \"add_time\": \"0000-00-\"\n            }\n        ],\n        \"response\": \"ok\",\n        \"error\": \"\"\n    }",
+          "type": "json"
+        },
+        {
+          "title": "成功返回",
+          "content": "{\n    \"message\": \"\",\n    \"next\": \"\",\n    \"data\": [],\n    \"response\": \"ok\",\n    \"error\": \"\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "失败返回",
+          "content": "{\n    \"message\": \"\",\n    \"next\": \"\",\n    \"data\": null,\n    \"response\": \"fail\",\n    \"error\": \"缺少参数user_id\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./tbkt_system_dj/ticket/ticket.py",
+    "groupTitle": "ticket",
+    "name": "PostTicketGet_all_ticket_by_type"
   }
 ]
