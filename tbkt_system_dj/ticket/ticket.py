@@ -54,7 +54,7 @@ def get_all_ticket_by_type(request):
         "error": "缺少参数user_id"
     }
     """
-    user_id = request.POST.get("user_id")  # 用户ID
+    user_id = request.POST.get("user_id")  # 用户user_id
     status = request.POST.get("status")  # 单条任务完成情况
     type = request.POST.get("type") # 0 全部状态 1 响应状态 2 响应超时 3 响应错误 4 SQL慢查询 5 APP错误
 
