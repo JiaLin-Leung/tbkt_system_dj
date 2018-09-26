@@ -77,6 +77,8 @@ def jsonp_response(callback, data):
     data = "%s(%s)" % (callback, data)
     r = HttpResponse(data)
     r['Content-Type'] = 'application/javascript'
+    r['Access-Control-Allow-Origin'] = '*'   #增加允许跨域请求
+
     return r
 
 
